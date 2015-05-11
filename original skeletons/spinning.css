@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+    #cube.spinning {
+      -webkit-animation: spinCubeWebkit 8s infinite ease-in-out;
+         -moz-animation: spinCubeMoz    8s infinite ease-in-out;
+           -o-animation: spinCubeO      8s infinite ease-in-out;
+              animation: spinCube       8s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes spinCubeWebkit {
+        0% { -webkit-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+      100% { -webkit-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+    }
+
+    @-moz-keyframes spinCubeMoz {
+        0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+      100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+    }
+	

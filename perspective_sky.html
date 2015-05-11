@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--Skeleton public, revised animation & translations by Rose Pember-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Limitless</title>
+  <style type="text/css" media="screen">
+    body {
+      background-image:url(img/keyframe3_green.png);
+      font-family:"Bebas Neue", Calibri, "DIN Condensed Bold", Garamond, "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Roboto Condensed", "Roboto Bold", "Roboto Light", "Roboto Thin", "Sans Serif Shaded", "Raleway Thin";
+      font-size: 18px;
+		-webkit-gradient(radial,50% 500, 1,
+                            50% 500, 400,
+                            from(rgba(255, 255, 255, 0.3)),
+                            to(rgba(255, 255, 255, 0)));
+     background-repeat: repeat;
+    }
+	
+    #container {
+	background-image:url(img/keyframe3_green.png);
+	background-repeat:round;
+      width: 100%;
+      height: 100px;
+      -webkit-perspective: 300; /* For compatibility with iPhone 3.0, we leave off the units here */
+      -webkit-perspective-origin: 60% -90px;
+    }
+	
+    #stage {
+		background-image:url(img/keyframe3_green.png);
+		background-repeat:round;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: -webkit-transform 12s;
+      -webkit-transform-style: preserve-3d;
+	  z-index:-500;
+    }
+    
+    #shape {
+      position: relative;
+      top: 200px;
+      margin: 0 auto;
+	  border: 10px  #F30;
+      height: 200px;
+      width: 200px;
+      -webkit-transform-style: preserve-3d;
+    }
+    
+    .plane {
+	position: absolute;
+	height: 500px;
+	width: 500px;
+	-webkit-border-radius: 12px;
+	-webkit-box-sizing: border-box;
+	text-align: center;
+	font-family: "Bebas Neue", Calibri, "DIN Condensed Bold", Garamond, "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Roboto Condensed", "Roboto Bold", "Roboto Light", "Roboto Thin", "Sans Serif Shaded", "Raleway Thin";
+	font-size: 124pt;
+	color: #3FF;
+	-webkit-transition: -webkit-transform 5s, opacity 2s;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: rotateY(130deg); /* Safari */
+	left: -422px;
+	top: -167px;
+			-webkit-transition-duration:0.8s;
+		-moz-transition-duration:0.8s;
+		-o-transition-duration:0.8s;
+		transition-duration:0.8s;
+    
+ 
+    
+	-webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    }
+
+    #shape.backfaces .plane {
+      -webkit-backface-visibility: visible;
+    }
+    
+	#shape {
+      -webkit-animation: spin 25s infinite linear;
+    }
+	
+    @-webkit-keyframes spin {
+      from { -webkit-transform: translate3d(-100px, -200px, -300px); }
+      to   { -webkit-transform: translate3d(100px, -300px, 200px); }
+    }
+	
+	 @-webkit-keyframes fade {
+      from { -webkit-transform: opacity 1; }
+      to   { -webkit-transform: opacity 0.6; }
+    }
+	
+	
+	.ring > .one {
+	-webkit-transform: translateZ(400px);
+	top: 242px;
+	left: 167px;
+    }
+
+    .ring > .two {
+	-webkit-transform: translateZ(100px);
+	top: 623px;
+	left: -614px;
+    }
+
+    .ring > .three {
+/*	-webkit-transform: translateZ(240px);*/
+	-webkit-transform: rotateZ(170deg);
+	top: 624px;
+	left: 847px;
+    }
+
+    .ring > .four {
+	-webkit-transform: translateZ(560px);
+	top: 80px;
+	left: 497px;
+    }
+
+    .ring > .five {
+      -webkit-transform: translateZ(20px);
+	  top: 390px;
+    }
+
+    .ring > .six {
+	-webkit-transform: translateZ(80px);
+	left: -306px;
+		top: 140px;
+    }
+
+    .ring > .seven {
+     -webkit-transform: translateZ(280px);
+	  -webkit-transform: rotateZ(100deg);
+    }
+
+    .ring > .eight {
+	-webkit-transform: translateZ(-340px);
+	top: 171px;
+	left: -221px;
+    }
+
+    .ring > .nine {
+      -webkit-transform: translateZ(390px);
+	  -webkit-transform: rotateZ(270deg);
+	   top:350px;
+	   left:-1300px;
+    }
+
+    .ring > .ten {
+	-webkit-transform: translateZ(300px);
+	top: 233px;
+	left: -138px;
+    }
+
+    .ring > .eleven {
+	-webkit-transform: translateZ(430px);
+	top: -131px;
+	left: 776px;
+    }
+
+    .ring > .twelve {
+	-webkit-transform: translateZ(460px);
+	left: 16px;
+		top: 20px;
+    }
+
+	a {
+		color:inherit;
+	}
+	
+	a:link{
+		color:inherit;
+		text-decoration:none;
+	}
+	
+	a:hover{
+		color:#FF0;
+	}
+	
+	.videoElement {
+    	margin: 0 0 0 0;
+    	background-image: url(img/keyfram_2_translucent.png);
+		z-index:-30;
+
+	}
+	
+	.plane:hover{
+	-webkit-transform:rotate(360deg);
+    
+	-moz-transform:rotate(360deg);
+    
+	-o-transform:rotate(360deg);
+	}
+</style>
+
+<script type="text/javascript" charset="utf-8">
+	//video javascript
+	//Put event listeners into place
+        window.addEventListener("DOMContentLoaded", function () {
+            // Grab elements, create settings, etc.
+            var video = document.querySelectorAll(".videoElement");
+            var errBack = function (error) {
+                console.log("Video capture error: ", error.code);
+            };
+            // Put video listeners into place
+            if (navigator.getUserMedia) { // Standard
+                navigator.getUserMedia({"video": true}, function (stream) {
+                    video[0].src = stream;
+                    video[0].play();
+					video[1].src = stream;
+                    video[1].play();
+					video[2].src = stream;
+                    video[2].play();
+					video[3].src = stream;
+                    video[3].play();
+					video[4].src = stream;
+                    video[4].play();
+					video[5].src = stream;
+                    video[5].play();
+					video[6].src = stream;
+                    video[6].play();
+					video[7].src = stream;
+                    video[7].play();
+					video[8].src = stream;
+                    video[8].play();
+					video[9].src = stream;
+                    video[9].play();
+					video[10].src = stream;
+                    video[10].play();
+					video[11].src = stream;
+                    video[11].play();
+                }, errBack);
+            } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+                navigator.webkitGetUserMedia({"video": true}, function (stream) {
+                    video[0].src = window.webkitURL.createObjectURL(stream);
+                    video[0].play();
+					video[1].src = window.webkitURL.createObjectURL(stream);
+                    video[1].play();
+					video[2].src = window.webkitURL.createObjectURL(stream);
+                    video[2].play();
+					video[3].src = window.webkitURL.createObjectURL(stream);
+                    video[3].play();
+					video[4].src = window.webkitURL.createObjectURL(stream);
+                    video[4].play();
+					video[5].src = window.webkitURL.createObjectURL(stream);
+                    video[5].play();
+					video[6].src = window.webkitURL.createObjectURL(stream);
+                    video[6].play();
+					video[7].src = window.webkitURL.createObjectURL(stream);
+                    video[7].play();
+					video[8].src = window.webkitURL.createObjectURL(stream);
+                    video[8].play();
+					video[9].src = window.webkitURL.createObjectURL(stream);
+                    video[9].play();
+					video[10].src = window.webkitURL.createObjectURL(stream);
+                    video[10].play();
+					video[11].src = window.webkitURL.createObjectURL(stream);
+                    video[11].play();
+                }, errBack);
+            }
+            else if (navigator.mozGetUserMedia) { // Firefox-prefixed
+                navigator.mozGetUserMedia({"video": true}, function (stream) {
+                    video[0].src = window.URL.createObjectURL(stream);
+                    video[0].play();
+					video[1].src = window.URL.createObjectURL(stream);
+                    video[1].play();
+					video[2].src = window.URL.createObjectURL(stream);
+                    video[2].play();
+					video[3].src = window.URL.createObjectURL(stream);
+                    video[3].play();
+					video[4].src = window.URL.createObjectURL(stream);
+                    video[4].play();
+					video[5].src = window.URL.createObjectURL(stream);
+                    video[5].play();
+					video[6].src = window.webkitURL.createObjectURL(stream);
+                    video[6].play();
+					video[7].src = window.webkitURL.createObjectURL(stream);
+                    video[7].play();
+					video[8].src = window.webkitURL.createObjectURL(stream);
+                    video[8].play();
+					video[9].src = window.webkitURL.createObjectURL(stream);
+                    video[9].play();
+					video[10].src = window.webkitURL.createObjectURL(stream);
+                    video[10].play();
+					video[11].src = window.webkitURL.createObjectURL(stream);
+                    video[11].play();
+                }, errBack);
+            }
+        }, false);
+		
+	//end video script-->
+
+</script>
+
+</head>
+<body>
+<div id="container">
+	<div id="text">
+  <div id="stage">
+      <div id="shape" class="ring backfaces" >
+        <div class="plane one"><video autoplay class="videoElement" width="450px" height="200px" style="opacity:.6"></video></div>
+        <div class="plane two"><img src="img/keyfram_2_translucent.png" width="800" height="800"/><video autoplay class="videoElement" width="450px" height="200px" style="opacity:.6"></video></div>
+        <div class="plane three"><video autoplay class="videoElement" width="650px" height="500px" style="opacity:.6"></video><img src="img/keyfram_2_translucent.png" width="800" height="800" />
+        <img src="img/keyfram_2_translucent.png" /></div>
+        <div class="plane four"><video autoplay class="videoElement" width="200px" height="200px"></video><img src="img/keyfram_2_translucent.png" width="800" height="800" /></div>
+        <div class="plane five"><video autoplay class="videoElement" width="500px" height="500px"></video><img src="img/keyfram_2_translucent.png" width="800" height="800"/></div>
+        <div class="plane six"><video autoplay class="videoElement" width="450px" height="600px" style="opacity:.7"><img src="img/keyfram_2_translucent.png" width="800" height="800"/></div>
+        <div class="plane seven"><img src="img/keyfram_2_translucent.png" width="800" height="800"/><img src="img/keyfram_2_translucent.png" width="800" height="800"/></div>
+        <div class="plane eight"><img src="img/keyfram_2_translucent.png" width="800" height="800"/></div>
+        <div class="plane nine"><video autoplay class="videoElement" width="300px" height="300px" style="opacity:..8"></video><img src="img/keyfram_2_translucent.png" width="800" height="800" /></div>
+        <div class="plane ten"><img src="img/keyfram_2_translucent.png" width="800" height="800" /><img src="img/keyfram_2_translucent.png" width="800" height="800"/></div>
+        <div class="plane eleven"><video autoplay class="videoElement" width="400px" height="400px" style="opacity:.4"></video><img src="img/keyfram_2_translucent.png" width="800" height="800"/></div>
+        <div class="plane twelve"><video autoplay class="videoElement" width="600px" height="600px" style="opacity:.6"></video><img src="img/keyfram_2_translucent.png" width="800" height="800" /></div>
+        
+      </div>
+  </div>
+</div>
+  
+</body>
+</html>
+</head>

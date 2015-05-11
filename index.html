@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ART_2701 Final Project</title>
+
+<style type="text/css" media="screen">
+	body{
+	text-align: center;
+	font-family: "Helvetica Neue", "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin", "Helvetica Neue UltraLight";
+	font-weight: 100;
+	font-size:30px;
+	}
+	
+	#page{
+		height: 100%;
+		width: 100%;
+	}
+	
+	#title{
+		width:100%;
+		height: 15%;
+		min-height: 80px;
+		max-height:200px;
+		margin: 5px;
+		position: relative;
+	}
+	
+/*	#logo{
+		width: auto;
+		height:100%;
+		background-color: #FFF;
+		float: left;
+		position: absolute;
+		z-index: 10;
+	}*/
+	/*
+	#title_text{
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	font-family:"Bebas Neue", Calibri, "DIN Condensed Bold", Garamond, "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Roboto Condensed", "Roboto Bold", "Roboto Light", "Roboto Thin", "Sans Serif Shaded", "Raleway Thin";
+	font-weight: 200;
+	font-size:50px;
+	background: #FFF;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	}*/
+	
+	
+	img{
+		max-width:100%;
+		max-height:100%;
+		width:100%;
+		height:100%;
+	}
+	
+	img.contain{
+		margin: auto;
+		overflow: hidden;
+		position:relative;
+	}
+	
+	#containter{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin-top: 100px;
+	text-align:center;
+	}
+	
+	#top_row{
+	width: 100%;
+	display:inline-block;
+	position:relative;
+	clear:none;
+	border:thin;
+	}
+	
+
+	#middle_row{
+	width: 100%;
+	display:inline-block;
+	position:relative;
+	clear: none;
+	border:thin;
+	}
+	
+	
+	#bottom_row{
+	width: 100%;
+	display:inline-block;
+	position:relative;
+	clear: none;
+	border:thin;
+	}
+	
+	.left_box{
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+	position:relative;
+	animation: pulse 5s;
+	margin: 1%;
+	}
+
+	.middle_box{
+	width: 500px;
+	height: 500px;
+	display:inline-block;
+	position: relative;
+	animation: pulse 5s;
+	margin: 1%;
+	}
+	
+	.right_box{
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+	position:relative;
+	animation: pulse 5s;
+	margin: 1%;
+	}
+	
+	.label{
+	background-color:rgba(255,255,0,0);
+	display: table-cell;
+	vertical-align:central;
+	z-index:10;
+	width: 100%;
+	height: 100%;
+	text-align:center;
+	position:absolute;
+	-webkit transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opactiy 500ms;
+	transition:opacity 500ms;
+	-webkit-transition: -webkit-transform 2s, opacity 2s;
+	font-size:70px;
+	font-style:bold;
+	font-weight:500;
+	font-family:"Helvetica Neue";
+	opacity:0;
+	}
+	
+	.label:hover{
+	background-color: rgba(0,0,0,.8);
+	opacity:1;
+	color: rgba(255,255,255,1);
+	}
+	
+	.left_box:hover{
+	opacity:1;
+	z-index:+20;
+	-webkit-animation: pulse 1.5s;
+	-moz-animation: pulse 1.5s;
+	-ms-animation: pulse 1.5s;
+	-o-animation: pulse 1.5s;
+	animation: pulse 1.5s;
+	}
+	
+	.middle_box:hover{
+	opacity:1;
+	z-index:+20;
+	-webkit-animation: pulse 1.5s;
+	-moz-animation: pulse 1.5s;
+	-ms-animation: pulse 1.5s;
+	-o-animation: pulse 1.5s;
+	animation: pulse 1.5s;
+	}
+	
+	.right_box:hover{
+	opacity:1;
+	z-index:+20;
+	-webkit-animation: pulse 1.5s;
+	-moz-animation: pulse 1.5s;
+	-ms-animation: pulse 1.5s;
+	-o-animation: pulse 1.5s;
+	animation: pulse 1.5s;
+	}
+	
+	.pulse {
+		-webkit-animation-name: pulse 1.5s linear;
+		-moz-animation-name: pulse;
+		-ms-animation-name: pulse;
+		-o-animation-name: pulse;
+		animation-name: pulse;
+	}
+
+	@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }	
+	50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+	}
+	@-moz-keyframes pulse {
+    0% { -moz-transform: scale(1); }	
+	50% { -moz-transform: scale(1.1); }
+    100% { -moz-transform: scale(1); }
+	}
+	@-ms-keyframes pulse {
+    0% { -ms-transform: scale(1); }	
+	50% { -ms-transform: scale(1.1); }
+    100% { -ms-transform: scale(1); }
+	}
+	@-o-keyframes pulse {
+    0% { -o-transform: scale(1); }	
+	50% { -o-transform: scale(1.1); }
+    100% { -o-transform: scale(1); }
+	}
+	@keyframes pulse {
+    0% { transform: scale(1); }	
+	50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+	}
+	
+	a {
+		text-decoration:none;
+		color:#6FF;
+	}
+	 a: hover{
+		 color: white;
+		 font-size:90px;
+		 text-decoration:underline;
+	 }
+	 
+	
+</style>
+
+</head>
+<body>
+<div id="page">
+<div id="title">
+<p>ART_2701: A Visual Analysis & Representation of Theories of Digital Infinity</p>
+</div>
+</div>
+<div id="containter">
+	<div id="top_row">
+    	<div class="left_box"><span class="label"><a href="perspective_sky.html">LIMITLESS LINES</a></span><img src="img/keyframe_perspective_index.png" class="img_contain"/></div>
+        <div class="middle_box"><span class="label"><a href="rotation_cube_ring.html">DIGITAL-SYNTHETIC COLOR</a></span><img src="img/square5.jpg" class="img_contain"/></div>
+        <div class="right_box"><span class="label"><a href="rotating_cube.html">COLLAPSING PERSPECTIVE</a></span><img src="img/keyframe_4_pink.png" class="img_contain"/></div>
+    </div>
+    <div id="middle_row">
+        <div class="left_box"><span class="label">Rotation in Space</span><img src="img/Infinite Rotation_index.png" class="img_contain"/></div>
+        <div class="middle_box"><span class="label">Image Placeholder</span><img src="img/keyframe_perspective_index.png" class="img_contain"/></div>
+        <div class="right_box"><span class="label">Perspective without Origin</span></div> 
+    </div>
+</div>
+</div>
+
+</body>
+</html>

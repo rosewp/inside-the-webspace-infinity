@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+  <style type="text/css" media="screen">
+    body {
+      background-image:url(img/FinalProj_2701_White_1.jpg);
+      font-family:"Bebas Neue", Calibri, "DIN Condensed Bold", Garamond, "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Roboto Condensed", "Roboto Bold", "Roboto Light", "Roboto Thin", "Sans Serif Shaded", "Raleway Thin";
+      font-size: 18px;
+		-webkit-gradient(radial,50% 500, 1,
+                            50% 500, 400,
+                            from(rgba(255, 255, 255, 0.3)),
+                            to(rgba(255, 255, 255, 0)));
+     background-repeat: repeat;
+    }
+	
+    #container {
+      width: 40%;
+      height: 100px;
+      -webkit-perspective: 300; /* For compatibility with iPhone 3.0, we leave off the units here */
+      -webkit-perspective-origin: 60% -90px;
+    }
+	
+    #stage {
+      width: 100%;
+      height: 100%;
+      -webkit-transition: -webkit-transform 12s;
+      -webkit-transform-style: preserve-3d;
+    }
+    
+    #shape {
+      position: relative;
+      top: 160px;
+      margin: 0 auto;
+	  border: 10px  #F30;
+	  background-color: none;
+      height: 200px;
+      width: 200px;
+      -webkit-transform-style: preserve-3d;
+    }
+    
+    .plane {
+	position: absolute;
+	
+	-webkit-border-radius: 12px;
+	-webkit-box-sizing: border-box;
+	text-align: center;
+	font-family: "Bebas Neue", Calibri, "DIN Condensed Bold", Garamond, "Helvetica Neue Light", "Helvetica Neue Medium", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Roboto Condensed", "Roboto Bold", "Roboto Light", "Roboto Thin", "Sans Serif Shaded", "Raleway Thin";
+	font-size: 44pt;
+	color: #3FF;
+	-webkit-transition: -webkit-transform 5s, opacity 2s;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: rotateY(130deg); /* Safari */
+	left: 120px;
+	top: -92px;
+    }
+
+    #shape.backfaces .plane {
+      -webkit-backface-visibility: visible;
+    }
+    
+	#shape {
+      -webkit-animation: spin 30s infinite linear;
+    }
+	
+    @-webkit-keyframes spin {
+      from { -webkit-transform: translate3d(200px, 200px, 500px); }
+      to   { -webkit-transform: translate3d(0px, 500px, -800px);}
+    }
+	
+	 @-webkit-keyframes fade {
+      from { -webkit-transform: opacity 1; }
+      to   { -webkit-transform: opacity 0.1; }
+    }
+	
+	.ring > .one {
+	-webkit-transform: translateZ(10px);
+	top: -1200px;
+	left: 1200px;
+    }
+
+    .ring > .two {
+	-webkit-transform: translateZ(40px);
+	top: 800px;
+	left: -800px;
+    }
+
+    .ring > .three {
+	-webkit-transform: translateZ(90px);
+	top: -600px;
+	left: 600px;
+    }
+
+    .ring > .four {
+	-webkit-transform: translateZ(150px);
+	top: 400px;
+	left:-400px;
+    }
+
+    .ring > .five {
+      -webkit-transform: translateZ(250px);
+	  left: 200px;
+	  top: -200px;
+    }
+
+    .ring > .six {
+      -webkit-transform: translateZ(380px);
+	  top: 0px;
+	  left: 0px;
+    }
+
+    .ring > .seven {
+      -webkit-transform: translateZ(430px);
+	  top: 100px;
+	  left: -100px;
+    }
+
+    .ring > .eight {
+	-webkit-transform: translateZ(560px);
+	top: -200px;
+	left: 200px;
+    }
+
+    .ring > .nine {
+      -webkit-transform: translateZ(600px);
+	   top:400px;
+	   left:-400px;
+    }
+
+    .ring > .ten {
+	-webkit-transform: translateZ(790px);
+	top: -508px;
+	left: 1120px;
+    }
+
+    .ring > .eleven {
+	-webkit-transform: translateZ(860px);
+	top: 800px;
+	left: -721px;
+    }
+
+    .ring > .twelve {
+	-webkit-transform: translateX(960px);
+	left: 1400px;
+	top: -1400px;
+    }
+	
+	    .ring > .thirteen {
+	-webkit-transform: translateX(1080px);
+	top: 2100px;
+	left: -2116px;
+    }
+	
+	    .ring > .fourteen {
+	-webkit-transform: translateX(1640px);
+	left: 3016px;
+	top: -3010px;
+    }
+	
+	    .ring > .fifteen {
+	-webkit-transform: translateZ(2160px);
+	left: -4016px;
+	top: 4060px;
+    }
+	
+	    .ring > .sixteen {
+	-webkit-transform: translateZ(2310px);
+	left: 3016px;
+	top: -3016px;
+    }
+	  	.ring > .seventeen {
+	-webkit-transform: translateZ(2580px);
+	left: -2000px;
+	top: 2000px;
+    }
+	
+	    .ring > .eighteen {
+	-webkit-transform: translateZ(3330px);
+	left: 1000px;
+	top: -1000px;
+    }
+	
+	    .ring > .nineteen {
+	-webkit-transform: translateZ(3860px);
+	left: -716px;
+	top: 700px;
+    }
+	
+	    .ring > .twenty {
+	-webkit-transform: translateZ(4730px);
+	left: 1636px;
+	top: -156px;
+    }
+	
+	    .ring > .twenty-one {
+	-webkit-transform: translateZ(5090px);
+	left: 300px;
+	top: -300px;
+    }
+	
+	    .ring > .twenty-two {
+	-webkit-transform: translateZ(6060px);
+	left: -200px;
+	top: 200px;
+    }
+	
+	    .ring > .twenty-three {
+	-webkit-transform: translateZ(7060px);
+	left: 2600px;
+	top: -134px;
+    }
+	
+	    .ring > .twenty-four {
+	-webkit-transform: translateZ(7960px);
+	left: 0px;
+	top: 0px;
+    }
+	
+	.1 p:hover{
+		color: #ff0;
+	}
+	
+	.2 p:hover{
+		color:#3F3;
+	}
+	
+	.3 p:hover{
+		color:#00F;
+	}
+	
+	p .4:hover{
+		color:#F00;
+	}
+	
+	p .5:hover{
+		color:#F3C;
+	}
+
+  </style>
+
+</head>
+<body>
+<div id="container">
+  <div id="stage">
+      <div id="shape" class="ring backfaces" >
+        <div class="plane one"><p class="1">Perspective</p></div>
+        <div class="plane two"><p class="2">is the technique</p></div>
+        <div class="plane three"><p class="3">used in art, drawing, painting</p></div>
+        <div class="plane four"><p class="4">that is used to create</p></div>
+        <div class="plane five"><p class="5">the illusion</p></div>
+        <div class="plane six"><p class="1">of three-dimensions</p></div>
+        <div class="plane seven"><p class="2">depth and space</p></div>
+        <div class="plane eight"><p class="3">in a two-dimensional</p></div>
+        <div class="plane nine"><p class="4">flat surface</p></div>
+        <div class="plane ten"><p class="5">this is used to create space that is not real</p></div>
+        <div class="plane eleven"><p class="4">how can we revolutionize perspective?</p></div>
+        <div class="plane twelve"><p class="3">in the digital medium1</p></div>
+        <div class="plane thirteen"><p class="2">the conflation between 2D and 3D</p></div>
+        <div class="plane fourteen"><p class="1">manufactures synthetic space</p></div>
+        <div class="plane fifteen"><p class="2">using perspective in a new way</p></div>
+        <div class="plane sixteen"><p class="3">where traditional drawing falls short</p></div>
+        <div class="plane seventeen"><p class="4">digital space</p></div>
+        <div class="plane eighteen"><p class="5">redefines what is real space</p></div>
+        <div class="plane nineteen"><p class="1">virtual reality</p></div>
+        <div class="plane twenty"><p class="2">exists through the artistic</p></div>
+        <div class="plane twenty-one"><p class="3">perspective to infinity</p></div>
+        <div class="plane twenty-two"><p class="4">focus on the Z-AXIS</p></div>
+        <div class="plane twenty-three"><p class="5">illustrate the possibility for digital construction</p></div>
+        <div class="plane twenty-four"><p class="1">of meaning</p></div>
+      </div>
+  </div>
+</div>
+  
+</body>
+</html>
+</head>
