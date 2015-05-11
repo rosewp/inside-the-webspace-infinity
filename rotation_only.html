@@ -181,12 +181,71 @@
     }
 
 
+	.videoElement {
+    	margin: 0 0 0 0;
+		width: 200px;
+		height: 200px;
+    	background-color:transparent;
+		-webkit-border-radius: 12px;
+		-webkit-box-sizing: border-box;
+	}
   </style>
+  
+  <script type="text/javascript" charset="utf-8">
+  //*video javascript
+  
+	// Put event listeners into place
+        window.addEventListener("DOMContentLoaded", function () {
+            // Grab elements, create settings, etc.
+            var video = document.querySelectorAll(".videoElement");
+            var errBack = function (error) {
+                console.log("Video capture error: ", error.code);
+            };
+              // Put video listeners into place
+            if (navigator.getUserMedia) { // Standard
+                navigator.getUserMedia({"video": true}, function (stream) {
+                    video[0].src = stream;
+                    video[0].play();
+					video[1].src = stream;
+                    video[1].play();
+					video[2].src = stream;
+                    video[2].play();
+					video[3].src = stream;
+                    video[3].play();
+                }, errBack);
+            } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+                navigator.webkitGetUserMedia({"video": true}, function (stream) {
+                    video[0].src = window.webkitURL.createObjectURL(stream);
+                    video[0].play();
+					video[1].src = window.webkitURL.createObjectURL(stream);
+                    video[1].play();
+					video[2].src = window.webkitURL.createObjectURL(stream);
+                    video[2].play();
+					video[3].src = window.webkitURL.createObjectURL(stream);
+                    video[3].play();
+                }, errBack);
+            }
+            else if (navigator.mozGetUserMedia) { // Firefox-prefixed
+                navigator.mozGetUserMedia({"video": true}, function (stream) {
+                    video[0].src = window.URL.createObjectURL(stream);
+                    video[0].play();
+					video[1].src = window.URL.createObjectURL(stream);
+                    video[1].play();
+					video[2].src = window.URL.createObjectURL(stream);
+                    video[2].play();
+					video[3].src = window.URL.createObjectURL(stream);
+                    video[3].play();
+                }, errBack);
+            }
+        }, false);
+		
+  </script>
 
 </head>
 <body>
 <div id="container">
   <div id="stage">
+  <video autoplay class="videoElement"></video>
       <div id="shape" class="ring backfaces" >
         <div class="plane one"></div>
         <div class="plane two"></div>
