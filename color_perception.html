@@ -66,42 +66,51 @@ body{
 	opacity: .8;
 	margin-top: 1%;
 	margin-left: 1%;
+	-webkit-transform: spin 12s infinite linear;
 
 }
+	
+    @-webkit-keyframes spin {
+      from { -webkit-transform: skew(0);
+	  }
+      to   { -webkit-transform: skew(360deg);
+	  }
+	}
 
 #layer_1{
 	width: 669px;
 	height: 90%;
 	opacity: .8;
+	margin-top: 1%;
+	margin-left: 1%;
 	z-index: 3;
-	animation: pulse 10s;
+	animation:spin 10s;
 	-ms-transform: skew(-20deg, 60deg); /* IE 9 */
 	-webkit-transform: skew(-20deg, 60deg); /* Safari */
 	transform: skew(-20deg, 60deg);
-	position: absolute;
-
 }
 
 #layer_2{
-	width: 33%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	opacity: .5;
-	position:relative;
+	margin-top: 1%;
+	margin-left: 1%;
 	z-index:5;
-	animation: pulse 5s;
+	animation: spin 5s;
     -ms-transform: skew(90deg); /* IE 9 */
     -webkit-transform: skew(90deg); /* Safari */
     transform: skew(90deg);
-	position:absolute;
 }
 
 #layer_3{
-	width: 33%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	opacity: .3;
+	margin-top: 1%;
+	margin-left: 1%;
 	z-index: 5;
-	animation: pulse 3.5s;
-	position: absolute;
+	animation: spin 3.5s;
 	-ms-transform: skew(-30deg); /* IE 9 */
 	-webkit-transform: skew(-30deg); /* Safari */
 	transform: skew(-30deg);
@@ -112,76 +121,43 @@ body{
 #layer_1:hover{
 	opacity:1;
 	z-index:+20;
-	-webkit-animation: pulse 5s;
-	-moz-animation: pulse 5s;
-	-ms-animation: pulse 5s;
-	-o-animation: pulse 5s;
-	animation: pulse 5s;
+	-webkit-animation: spin 5s;
+	-moz-animation: spin 5s;
+	-ms-animation: spin 5s;
+	-o-animation: spin 5s;
+	animation: spin 5s;
 	}
 	
 #layer_2:hover{
 	opacity:1;
 	z-index:+20;
-	-webkit-animation: pulse 2.5s;
-	-moz-animation: pulse 2.5s;
-	-ms-animation: pulse 2.5s;
-	-o-animation: pulse 2.5s;
-	animation: pulse 2.5s;
+	-webkit-animation: spin 2.5s;
+	-moz-animation: spin 2.5s;
+	-ms-animation: spin 2.5s;
+	-o-animation: spin 2.5s;
+	animation: spin 2.5s;
 	}
 
 #layer_3:hover{
 	opacity:1;
 	z-index:+20;
-	-webkit-animation: pulse 3.5s;
-	-moz-animation: pulse 3.5s;
-	-ms-animation: pulse 3.5s;
-	-o-animation: pulse 3.5s;
-	animation: pulse 3.5s;
+	-webkit-animation: spin 3.5s;
+	-moz-animation: spin 3.5s;
+	-ms-animation: spin 3.5s;
+	-o-animation: spin 3.5s;
+	animation: spin 3.5s;
 	}
 	
-	.pulse {
-		-webkit-animation-name: pulse 1.5s linear;
-		-moz-animation-name: pulse;
-		-ms-animation-name: pulse;
-		-o-animation-name: pulse;
-		animation-name: pulse;
-	}
-	
-	@-webkit-keyframes pulse {
-    0% { -webkit-transform: scale(1); }	
-	50% { -webkit-transform: scale(.2); }
-    100% { -webkit-transform: scale(1); }
-	}
-	@-moz-keyframes pulse {
-    0% { -moz-transform: scale(1); }	
-	50% { -moz-transform: scale(.2); }
-    100% { -moz-transform: scale(1); }
-	}
-	@-ms-keyframes pulse {
-    0% { -ms-transform: scale(1); }	
-	50% { -ms-transform: scale(.2); }
-    100% { -ms-transform: scale(1); }
-	}
-	@-o-keyframes pulse {
-    0% { -o-transform: scale(1); }	
-	50% { -o-transform: scale(.2); }
-    100% { -o-transform: scale(1); }
-	}
-	@keyframes pulse {
-    0% { transform: scale(1); }	
-	50% { transform: scale(.2); }
-    100% { transform: scale(1); }
-	}
 
 </style>
 
 </head>
 
 <body>
-<div id="container"><img src="img/color_layers_together.png"/>
-  <div id="layer_1"><img src="img/Layer_Blue_trans.gif" width="300" height="800"/></div>
-  <div id="layer_2"><img src="img/black_trans.gif"width="300" height="800"/></div>
-    <div id="layer_3"></div>
+<div id="container">
+  <div id="layer_1"><img src="img/Layer_Blue_trans.gif" /></div>
+  <div id="layer_2"><img src="img/black_trans.gif"/></div>
+   <div id="layer_3"><img src="img/color_layers_together.png"/></div>
 </div>
 
 
