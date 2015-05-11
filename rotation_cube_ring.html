@@ -230,24 +230,6 @@
     .ring > .twelve {
       -webkit-transform: rotateY(330deg) translateZ(380px);
     }
-
-/*    .controls {
-      width: 80%;
-      margin: 0 auto;
-      padding: 40px 50px;
-      background-color: rgba(255, 255, 255, .4);
-    }
-    .controls > div {
-      margin: 40px;
-	  text-align:center;
-	  position:relative;
-	  background-color: #0FF;
-	  padding-bottom: 20px;
-	  padding-top: 20px;
-	  -webkit-border-radius: 12px;
-	  font-size: 24px;
-	  font color: #000;
-    }*/
 	
 	/*---video styles---*/
 	.videoElement {
@@ -271,54 +253,6 @@
     {
         if (!hasClassName(inElement, inClassName))
             inElement.className = [inElement.className, inClassName].join(' ');
-    }
-
-    function removeClassName(inElement, inClassName)
-    {
-        if (hasClassName(inElement, inClassName)) {
-            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-            var curClasses = inElement.className;
-            inElement.className = curClasses.replace(regExp, ' ');
-        }
-    }
-
-    function toggleClassName(inElement, inClassName)
-    {
-        if (hasClassName(inElement, inClassName))
-            removeClassName(inElement, inClassName);
-        else
-            addClassName(inElement, inClassName);
-    }
-
-    function toggleShape()
-    {
-      var shape = document.getElementById('shape');
-      if (hasClassName(shape, 'ring')) {
-        removeClassName(shape, 'ring');
-        addClassName(shape, 'cube');
-      } else {
-        removeClassName(shape, 'cube');
-        addClassName(shape, 'ring');
-      }
-      
-      // Move the ring back in Z so it's not so in-your-face.
-      var stage = document.getElementById('stage');
-      if (hasClassName(shape, 'ring'))
-        stage.style.webkitTransform = 'translateZ(-200px)';
-      else
-        stage.style.webkitTransform = '';
-    }
-    
-	//toggle switch to animate button for visible backfaces
-	
-    function toggleBackfaces()
-    {
-      var backfacesVisible = document.getElementById('backfaces').checked;
-      var shape = document.getElementById('shape');
-      if (backfacesVisible)
-        addClassName(shape, 'backfaces');
-      else
-        removeClassName(shape, 'backfaces');
     }
 	
 	//*video javascript
